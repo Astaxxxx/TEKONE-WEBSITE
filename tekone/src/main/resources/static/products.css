@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+p {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #333;
+}
+.product-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.product-image {
+  flex: 1;
+  max-width: 500px;
+  margin-right: 20px;
+}
+.product-description {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.price {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: green;
+}
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+#remove-from-cart {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: rgb(238, 33, 10);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
+}
+
+
+
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (max-width: 600px) {
+  
+  .product-info {
+    flex-direction: column;
+  }
+  .product-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+
+table.specifications {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+table.specifications th,
+table.specifications td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table.specifications th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #444;
+  width: 40%;
+}
+
+table.specifications td {
+  width: 60%;
+}

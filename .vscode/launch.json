@@ -1,0 +1,49 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch TekoneApplication",
+            "request": "launch",
+            "mainClass": "tekone.TekoneApplication",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Launch homepage",
+            "request": "launch",
+            "mainClass": "com.homepage",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Launch home",
+            "request": "launch",
+            "mainClass": "com.home",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Launch home",
+            "request": "launch",
+            "mainClass": "com.home.home",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Launch hoe",
+            "request": "launch",
+            "mainClass": "com.home.hoe",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoApplication<demo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.demo.DemoApplication",
+            "projectName": "demo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
