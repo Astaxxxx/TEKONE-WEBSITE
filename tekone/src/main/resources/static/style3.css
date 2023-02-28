@@ -1,0 +1,96 @@
+
+nav {
+    display: flex;
+    align-items: center;
+    
+    background-color: #2b6dcf;
+    color: white;
+    padding: 1px;
+    overflow: hidden;
+  }
+  
+
+  nav a {
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+
+  }
+
+  nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+nav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+section {
+    padding: 50px;
+    background-color: #f2f2f2;
+    margin-top: 20px;
+}
+
+  /* Product Form Styling */
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  button {
+    background-color: #2b6dcf;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: rgb(173, 162, 6);
+  }
+
+  h2 {
+    margin-top: 0;
+}
+
+ body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
