@@ -5,11 +5,8 @@
             "name": "Launch TekoneApplication",
             "request": "launch",
             "mainClass": "tekone.TekoneApplication",
-<<<<<<< HEAD
             "projectName": "tekone"
-=======
-            "projectName": "demo"
->>>>>>> 4e7802a2f9d59042bdaf4583308d824b8c0208da
+            
         },
         {
             "type": "java",

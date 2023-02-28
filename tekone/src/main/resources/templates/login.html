@@ -3,8 +3,42 @@
     <head>
         <meta charset="utf-8">
         <title>Login Form</title>
-        <link rel="stylesheet" href="login.css"> <!-- Link login.css stylsheet to html code -->
+        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="nav.css"> <!-- Link login.css stylsheet to html code -->
+        <script src="nav.js"></script>
     </head>
+    <nav>
+        <div class="logo">
+            <img src="pic/Tekone.png" alt="">
+            <span>
+                TEKONE
+            </span>
+        </div>
+        <ul>
+            <li><a href="/index">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/contacts">Contact Us</a></li>
+            <li><a href="/aboutus">About Us</a></li>
+            <li><a href="/signup">Signup</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+    <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    
+    <ul class = "mobile-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="/products">Products</a></li>
+        <li><a href="/contacts">Contact Us</a></li>
+        <li><a href="/aboutus">About Us</a></li>
+        <li><a href="/signup">Signup</a></li>
+        <li><a href="/login">Login</a></li>
+    </ul>
+    </div>
     <body> <!-- Body of page incuding background colour and font used throughout -->
         <div class="center">
            <h1> Login</h1> 
@@ -21,11 +55,7 @@
             </div>
             <input type = "submit" value="Login">
             <div class="signup"> <!-- Secition for user to signup if they do not already have an account -->
-<<<<<<< Updated upstream:tekone/src/main/resources/templates/login.html
-                No account? <a href="login.html">Create Account</a> <!-- href attribute to redirect user to signup page -->
-=======
-                No account? <a href="signup.html">Create Account</a> <!-- href attribute to redirect user to signup page -->
->>>>>>> Stashed changes:login.html
+                No account? <a href="/signup">Create Account</a> <!-- href attribute to redirect user to signup page -->
             </div>
            </form>
         </div>

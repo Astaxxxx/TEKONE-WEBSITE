@@ -7,16 +7,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-public class HomeController {
-   @RequestMapping(value = "/index")
-   public String index() {
-      return "index";
+public class ProductsController {
+   @RequestMapping(value = "/products")
+   public String products() {
+      return "products";
    }
 }
