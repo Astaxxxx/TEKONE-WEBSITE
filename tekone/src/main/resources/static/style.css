@@ -1,40 +1,66 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-
-* {
-  padding: 0;
+*{
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-body {
-  background-color: #353836;
-  color: white;
-  font-family: "Poppins", sans-serif;
+.headerr{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(5,0,136,0.5),rgba(5,0,136,0.5)), url(pic/Tekone.png);
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
 }
-
 header a {
   text-decoration: none;
 }
 
-header {
-  padding: 0 20px;
-  background-color: #1d1f1d;
-  height: 50px;
+
+nav{
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  transition: background 1s;
 }
 
-#brand {
-  font-weight: bold;
-  font-size: 18px;
+nav .logo{
   display: flex;
   align-items: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+}
+nav .logo img{
+  width: 60px;
+  margin-right: 10px;
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
 }
 
-#brand a {
-  color: #09c372;
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
 }
 
+nav:hover{
+  background: #fff;
+}
+
+nav:hover .logo{
+  color: #333;
+}
+
+nav:hover ul li a{
+  color: #333;
+}
 ul {
   list-style: none;
   height: 100%;
@@ -42,11 +68,9 @@ ul {
   align-items: center;
   justify-content: space-around;
 }
-
 ul a {
   color: white;
 }
-
 ul li {
   padding: 5px;
   margin-left: 10px;
@@ -57,28 +81,58 @@ ul li:hover {
   transition: 0.3s;
 }
 
-#login,
-#signup {
-  border-radius: 5px;
-  padding: 5px 8px;
+.content{
+  margin-top: 9%;
+  margin-left: 9%;
+  color: #fff;
+}
+.content h1{
+  font-size: 120px;
+  line-height: 140px;
+  font-weight: 600;
 }
 
-#login {
-  border: 1px solid #498afb;
+.content p{
+  max-width: 500px;
+  line-height: 28px;
+  opacity: 0;
+}
+.links{
+  margin-top: 30px;
+  opacity: 0;
+}
+.links a{
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn{
+  border: 2px solid #fff;
+  padding: 10px 35px;
+  border-radius: 30px;
+  margin-right: 15px;
+}
+.slide-left{
+  animation: slideleft 1s linear forwards;
+}
+@keyframes slideleft {
+  0%{
+      transform: translate(100px);
+      opacity: 0;
+  }
+  100%{
+      transform: translate(0px);
+      opacity: 1;
+  }
 }
 
-#signup {
-  border: 1px solid #ff3860;
+p.slide-left{
+  animation-delay: 1s;
 }
 
-#signup a {
-  color: #ff3860;
+.links.slide-left{
+  animation-delay: 2s;
 }
-
-#login a {
-  color: #498afb;
-}
-
 #hamburger-icon {
   margin: auto 0;
   display: none;
