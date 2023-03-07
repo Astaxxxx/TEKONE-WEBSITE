@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+<link id="admineStyle" href="loginpage.css" rel="stylesheet"/>
+
+<meta charset="utf-8" />
+    <title>
+
+    </title>
+  </head>
+    <body>
+
+    <div class="background">
+   <div class="shape"></div>
+    <div class="shape"></div>
+   </div>
+    <form> 
+        <h3>Register Here</h3>
+   <label for="name">Name</label>
+   <input type="text" placeholder="Name" id="name" pattern="[a-zA-Z'-'\s]*" required 
+   oninvalid="this.setCustomValidity('Enter Name Here Please')" oninput="this.setCustomValidity('')">
+   <label for="email">Email</label>
+   <input type="text" placeholder="Email or Phone" id="email" pattern="A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required 
+   oninvalid="this.setCustomValidity('Enter Email Here Please')" oninput="this.setCustomValidity('')">
+   <label for="name">Home Address</label>
+   <input type="text" placeholder="address" id="address" pattern="[0-9]{1,3} [a-zA-Z0-9\s]{1,50}"  
+   oninvalid="this.setCustomValidity('Enter address Here Please')" oninput="this.setCustomValidity('')">
+   <label for="name">Phone</label>
+   <input type="text" placeholder="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  
+   oninvalid="this.setCustomValidity('Enter address Here Please')" oninput="this.setCustomValidity('')">
+   <label for="password">Password</label>
+   <input class="p" type="password" placeholder="password" id="password"   required 
+   oninvalid="this.setCustomValidity('Enter Password  Here Please')" oninput="this.setCustomValidity('')">
+   <label for="cpassword">Confirm Password</label>
+   <input class="cp" type="password" placeholder="repeat password" id="cpassword" required 
+   onkeyup="Validate()"
+   oninvalid="this.setCustomValidity('Enter Same Password  Here Please')" oninput="this.setCustomValidity('')">
+
+   <input type="checkbox" onclick="myFunction()">Show Password
+<script>
+    function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+    function Validate() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("cpassword").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+        
+            return false;
+        }
+        return true;
+    }
+   
+</script>
+   <button class="btn-2">Register In</button> <div class="social">
+    <p>Do you want to <a href="loginpage.html" class="hover-link"> Login?</a></p>
+   </div> </form>
+   </body> </html> 
