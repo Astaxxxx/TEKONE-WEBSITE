@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Login Form</title>
+        <link rel="stylesheet" href="login.css"> <!-- Link login.css stylsheet to html code -->
+    </head>
+    <body> <!-- Body of page incuding background colour and font used throughout -->
+        <div class="center">
+           <h1> Login</h1> 
+           <form method="post">
+            <div class="txt_field"> <!-- Class for Text field for user to input their username or email -->
+                <input type="text" required> <!-- Included validation, user has to insert text before continuing. -->
+                <span></span>
+                <label>Username/Email</label> <!-- Label for username/email -->
+            </div>
+            <div class="txt_field"> <!-- Class for password text field -->
+                <input type="password" required> <!-- Password field defined so characters are masked -->
+                <span></span>
+                <label>Password</label> <!-- Label for password -->
+            </div>
+            <input type = "submit" value="Login">
+            <div class="signup"> <!-- Secition for user to signup if they do not already have an account -->
+                No account? <a href="signup.html">Create Account</a> <!-- href attribute to redirect user to signup page -->
+            </div>
+           </form>
+        </div>
+    </body>
+</html>
