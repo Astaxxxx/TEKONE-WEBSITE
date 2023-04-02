@@ -2,11 +2,17 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TekoneApplication",
+            "request": "launch",
+            "mainClass": "com.tekone.tekone.TekoneApplication",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
             "name": "Launch TekoneApplication",
             "request": "launch",
             "mainClass": "tekone.TekoneApplication",
             "projectName": "tekone"
-            
         },
         {
             "type": "java",
