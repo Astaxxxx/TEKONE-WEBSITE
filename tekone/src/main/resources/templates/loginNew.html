@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="en" dir="ltr" >
+    <html lang="en" xmlns:th="http://www.w3.org./1999/xhtml">
+        <th:replace="common/header :: common-header">
+    <head>
+        <meta charset="utf-8">
+        <title>Login Form</title>
+        <link rel="stylesheet" href="/css/login.css">
+        <link rel="stylesheet" href="/css/styler.css">
+        <!-- Link login.css stylsheet to html code -->
+        <script src="/js/nav.js"></script>
+        <title>TEKONE</title>
+        <link rel="icon" href="/image/Tekone.png">  
+        <link href="https://fonts.googleapis.com/css?family=Nunito|Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">  
+        <link href="/css/bootstrap.min.css" rel="stylesheet">  
+        <link href="/css/data.css" rel="stylesheet">  
+        <link href="/css/tagsinput.css" rel="stylesheet">  
+        <link href="/css/simplePagination.css" rel="stylesheet" />   
+        <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" />      
+        <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" rel="stylesheet" />      
+        <link href="/css/style.css" rel="stylesheet">
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link rel="stylesheet" href="/css/nav.css"> <!-- Link login.css stylsheet to html code -->
+        <script src="/js/nav.js"></script>  
+    </head>
+    </head>
+    
+    <div th:replace="common/header :: navbar"> </div>
+    <body> <!-- Body of page incuding background colour and font used throughout -->
+        
+        <div class="center">
+           <h1> Login</h1> 
+           <form th:action="@{/login}" method="post">
+            <div class="txt_field"> <!-- Class for Text field for user to input their username or email -->
+                <i data-feather="user"></i> 
+                <input required="required" type="text" class="form-control" placeholder="" name="username" 
+                th:classappend="${param.error} ? is-invalid"> <!-- Included validation, user has to insert text before continuing. -->
+                <span></span>
+                <label>Username/Email</label> <!-- Label for username/email -->
+            </div>
+            <div class="txt_field"> <!-- Class for password text field -->
+                <i data-feather="lock"></i> 
+                <input required="required" type="password" class="form-control" placeholder="" name="password"
+                th:classappend="${param.error} ? is-invalid"> <!-- Password field defined so characters are masked -->
+                <span></span>
+                <label>Password</label> <!-- Label for password -->
+            </div>
+            <button type="submit"
+                    class="btn btn-primary btn-block">LOGIN</button>
+            <div class="signup"> <!-- Secition for user to signup if they do not already have an account -->
+                No account? <a href="/signup">Create Account</a> <!-- href attribute to redirect user to signup page -->
+            </div>
+           </form>
+        </div>
+    </body>
+</html>

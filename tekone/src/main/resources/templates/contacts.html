@@ -1,50 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org./1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
-    <link rel="stylesheet" href="nav.css">
-    <script src="nav.js"></script>
-    <script src="vali.js"></script>
+    <link rel="stylesheet" href="/css/style2.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <script src="/css/nav.js"></script>
+    <script src="/css/vali.js"></script>
+    <title>TEKONE</title>
+    <link rel="icon" href="/image/Tekone.png">  
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">  
+    <link href="/css/bootstrap.min copy.css" rel="stylesheet">   
+    <link href="/css/data.css" rel="stylesheet">  
+    <link href="/css/tagsinput.css" rel="stylesheet">  
+    <link href="/css/simplePagination.css" rel="stylesheet" />   
+    <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" />      
+    <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" rel="stylesheet" />      
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="/css/nav.css"> <!-- Link login.css stylsheet to html code -->
+    <script src="/js/nav.js"></script>  
+</head>
 
     
     <title>Contacts</title>
 </head>
-<nav>
-  <div class="logo">
-      <img src="pic/Tekone.png" alt="">
-      <span>
-          TEKONE
-      </span>
-  </div>
-  <ul>
-      <li><a href="/index">Home</a></li>
-      <li><a href="#">Basket</a></li>
-      <li><a href="/products">Products</a></li>
-      <li><a href="/contacts">Contact Us</a></li>
-      <li><a href="/aboutus">About Us</a></li>
-      <li><a href="/signup">Signup</a></li>
-      <li><a href="/login">Login</a></li>
-  </ul>
-</nav>
-<div id="hamburger-icon" onclick="toggleMobileMenu(this)">
-<div class="bar1"></div>
-<div class="bar2"></div>
-<div class="bar3"></div>
-
-<ul class = "mobile-menu">
-  <li><a href="/index">Home</a></li>
-  <li><a href="#">Basket</a></li>
-  <li><a href="/products">Products</a></li>
-  <li><a href="/contacts">Contact Us</a></li>
-  <li><a href="/aboutus">About Us</a></li>
-  <li><a href="/signup">Signup</a></li>
-  <li><a href="/login">Login</a></li>
-</ul>
-</div>
-<body>
+<div th:replace="common/header :: navbar"> </div>
 
   <h1>Contacts</h1>
  

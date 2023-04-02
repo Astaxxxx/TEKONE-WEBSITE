@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product card</title>
+    <link rel="stylesheet" href="/css/all-min.css">
+    <link rel="stylesheet" href="/css/accessoriePage.css">
+    <title>TEKONE</title>
+    <link rel="icon" href="/image/Tekone.png">  
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">  
+    <link href="/css/bootstrap.min.css" rel="stylesheet">  
+    <link href="/css/data.css" rel="stylesheet">  
+    <link href="/css/tagsinput.css" rel="stylesheet">  
+    <link href="/css/simplePagination.css" rel="stylesheet" />   
+    <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" />      
+    <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" rel="stylesheet" />      
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="/css/nav.css"> <!-- Link login.css stylsheet to html code -->
+    <script src="/js/nav.js"></script>  
+</head>
+</head>
+<body>
+  <div th:replace="common/header :: navbar"> </div>
+    <div class="container">
+
+        <div class="header">
+            <h1>PC</h1>
+        </div>
+
+        <div class="products">
+            
+            <div class="product">
+                <div class="image">
+                  <a th:href="@{/article-detail?id=22}"><img src="image/Products/pcs.jpg" alt=""></a>
+                </div>
+                <div class="namePrice">
+                    <h3>Pc 1</h3>
+                    <span>£ 60</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+                
+                
+            </div>
+
+            <div class="product">
+                <div class="image">
+                  <a th:href="@{/article-detail?id=23}"><img src="image/Products/pc2.jpg" alt=""></a>
+                </div>
+                <div class="namePrice">
+                    <h3>Pc 2</h3>
+                    <span>£ 60</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="product">
+                <div class="image">
+                  <a th:href="@{/article-detail?id=24}"><img src="image/Products/pc3.jpg" alt=""></a>
+                </div>
+                <div class="namePrice">
+                    <h3>Pc 3</h3>
+                    <span>£ 60</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="product">
+                <div class="image">
+                  <a th:href="@{/article-detail?id=25}"><img src="image/Products/pc4.jpg" alt=""></a>
+                </div>
+                <div class="namePrice">
+                    <h3>Pc 4</h3>
+                    <span>£ 60</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="product">
+              <div class="image">
+                <a th:href="@{/article-detail?id=26}"><img src="image/Products/pc5.jpg" alt=""></a>
+              </div>
+              <div class="namePrice">
+                  <h3>Pc 5</h3>
+                  <span>£ 60</span>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+    </div>
+    
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
