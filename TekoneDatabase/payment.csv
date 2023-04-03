@@ -1,0 +1,11 @@
+id,card_name,card_number,cvc,expiry_month,expiry_year,holder_name,type,order_id
+1,NULL,3435343434344,43,1,2020,re,visa,3
+2,NULL,4242424242424242422,322,1,2020,fw,visa,5
+3,NULL,32,32,1,2020,32332,visa,6
+4,NULL,23,32,9,2020,sd,mastercard,8
+5,NULL,23,32,1,2020,32,visa,9
+6,NULL,88,9,1,2020,32332,visa,10
+7,NULL,21,21,1,2020,21,visa,11
+8,NULL,3424,32,1,2020,hello,visa,12
+9,NULL,323323,322,1,2020,sd,visa,13
+10,NULL,4242424242424242,32332,1,2020,"mr sjj",mastercard,15

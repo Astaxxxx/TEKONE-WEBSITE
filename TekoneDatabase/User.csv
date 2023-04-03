@@ -1,0 +1,5 @@
+id,email,first_name,last_name,password,username,address_id
+1,admin@admin.com,NULL,NULL,$2a$12$rsbXuaMWQMSUjMQlqTAay.qAteqRAjpUxwReyW8Pi0XvYcWkj.oWK,admin,NULL
+2,hello@gmail.com,asta,NULL,$2a$12$rsbXuaMWQMSUjMQlqTAay.W/9eNLgrzr60bbG/UB9dxRtwA1mE9Fi,hello,NULL
+3,hello1@gmail.com,NULL,NULL,$2a$12$rsbXuaMWQMSUjMQlqTAay.pGpG1uwv9H4pm5TG3QFVLecO7wL/ism,hello1,NULL
+4,hello2@gmail.com,NULL,NULL,$2a$12$rsbXuaMWQMSUjMQlqTAay.cTSultUY7VlilBs8.wQV9FtSWlYWHtq,hello2,NULL
