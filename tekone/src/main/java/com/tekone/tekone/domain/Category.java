@@ -16,14 +16,14 @@ public class Category {
 	
 	@ManyToOne
 	@JoinColumn(name="article_id")
-	private Article article;
+	private Product article;
 	
 	private String name;
 	
 	public Category() {
 	}
 	
-	public Category(String name, Article article) {
+	public Category(String name, Product article) {
 		this.name = name;
 		this.article = article;
 	}
@@ -36,11 +36,11 @@ public class Category {
 		this.id = id;
 	}
 
-	public Article getArticle() {
+	public Product getArticle() {
 		return article;
 	}
 
-	public void setArticle(Article article) {
+	public void setArticle(Product article) {
 		this.article = article;
 	}
 

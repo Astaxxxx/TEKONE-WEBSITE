@@ -40,21 +40,21 @@ public class AccountController {
 	private OrderService orderService;
 
 	@RequestMapping("/login")
-	public String log(Model model) {
+	public String login(Model model) {
 		model.addAttribute("usernameExists", model.asMap().get("usernameExists"));
 		model.addAttribute("emailExists", model.asMap().get("emailExists"));
 		return "loginNew";
 	}
 	
 	@RequestMapping("/my-profile")
-	public String myProfile(Model model, Authentication authentication) {				
+	public String Profile(Model model, Authentication authentication) {				
 		User user = (User) authentication.getPrincipal();
 		model.addAttribute("user", user);
 		return "myProfile";
 	}
 	
 	@RequestMapping("/my-orders")
-	public String myOrders(Model model, Authentication authentication) {
+	public String Orders(Model model, Authentication authentication) {
 		User user = (User) authentication.getPrincipal();
 		model.addAttribute("user", user);
 		List<Order> orders = orderService.findByUser(user);
@@ -63,14 +63,14 @@ public class AccountController {
 	}
 	
 	@RequestMapping("/my-address")
-	public String myAddress(Model model, Principal principal) {
+	public String Address(Model model, Principal principal) {
 		User user = userService.findByUsername(principal.getName());
 		model.addAttribute("user", user);
 		return "myAddress";
 	}
 	
 	@RequestMapping(value="/update-user-address", method=RequestMethod.POST)
-	public String updateUserAddress(@ModelAttribute("address") Address address, 
+	public String updateAddress(@ModelAttribute("address") Address address, 
 			Model model, Principal principal) throws Exception {
 		User currentUser = userService.findByUsername(principal.getName());
 		if(currentUser == null) {

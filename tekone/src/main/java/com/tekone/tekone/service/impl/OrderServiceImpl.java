@@ -10,14 +10,14 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.tekone.tekone.domain.Article;
+import com.tekone.tekone.domain.Product;
 import com.tekone.tekone.domain.CartItem;
 import com.tekone.tekone.domain.Order;
 import com.tekone.tekone.domain.Payment;
 import com.tekone.tekone.domain.Shipping;
 import com.tekone.tekone.domain.ShoppingCart;
 import com.tekone.tekone.domain.User;
-import com.tekone.tekone.repository.ArticleRepository;
+import com.tekone.tekone.repository.ProductRepository;
 import com.tekone.tekone.repository.CartItemRepository;
 import com.tekone.tekone.repository.OrderRepository;
 import com.tekone.tekone.service.OrderService;
@@ -32,7 +32,7 @@ public class OrderServiceImpl implements OrderService {
 	CartItemRepository cartItemRepository;
 	
 	@Autowired
-	ArticleRepository articleRepository;
+	ProductRepository articleRepository;
 			
 	@Override
 	@Transactional
@@ -55,7 +55,7 @@ public class OrderServiceImpl implements OrderService {
 		
 		List<CartItem> cartItems = shoppingCart.getCartItems();
 		for (CartItem item : cartItems) {
-			Article article = item.getArticle();
+			Product article = item.getArticle();
 			article.decreaseStock(item.getQty());
 			articleRepository.save(article);
 			item.setOrder(order);

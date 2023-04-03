@@ -7,19 +7,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.tekone.tekone.domain.Article;
-import com.tekone.tekone.service.ArticleService;
+import com.tekone.tekone.domain.Product;
+import com.tekone.tekone.service.ProductService;
 
 @Controller
 public class HomeController {
 		
 	@Autowired
-	private ArticleService articleService;
+	private ProductService articleService;
 	
 	
 	@RequestMapping("/")
 	public String index(Model model) {		
-		List<Article> articles = articleService.findFirstArticles();
+		List<Product> articles = articleService.findFirstArticles();
 		model.addAttribute("articles", articles);
 		return "index";
 	}

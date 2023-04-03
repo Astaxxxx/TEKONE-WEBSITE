@@ -22,7 +22,7 @@ public class CartItem {
 	
 	@OneToOne
 	@JoinColumn(name="article_id")
-	private Article article;
+	private Product article;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="user_id")
@@ -64,10 +64,10 @@ public class CartItem {
 	public void setQty(int qty) {
 		this.qty = qty;
 	}
-	public Article getArticle() {
+	public Product getArticle() {
 		return article;
 	}
-	public void setArticle(Article article) {
+	public void setArticle(Product article) {
 		this.article = article;
 	}
 	public User getUser() {

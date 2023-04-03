@@ -10,23 +10,23 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.tekone.tekone.domain.Article;
-import com.tekone.tekone.form.ArticleFilterForm;
-import com.tekone.tekone.service.ArticleService;
+import com.tekone.tekone.domain.Product;
+import com.tekone.tekone.form.ProductFilterForm;
+import com.tekone.tekone.service.ProductService;
 import com.tekone.tekone.type.SortFilter;
 
 @Controller
 public class StoreController {
 	
 	@Autowired
-	private ArticleService articleService;
+	private ProductService articleService;
 	
 	@RequestMapping("/store")
-	public String store(@ModelAttribute("filters") ArticleFilterForm filters, Model model) {
+	public String store(@ModelAttribute("filters") ProductFilterForm filters, Model model) {
 		Integer page = filters.getPage();			
 		int pagenumber = (page == null ||  page <= 0) ? 0 : page-1;
 		SortFilter sortFilter = new SortFilter(filters.getSort());	
-		Page<Article> pageresult = articleService.findArticlesByCriteria(PageRequest.of(pagenumber,9, sortFilter.getSortType()), 
+		Page<Product> pageresult = articleService.findArticlesByCriteria(PageRequest.of(pagenumber,9, sortFilter.getSortType()), 
 																filters.getPricelow(), filters.getPricehigh(), 
 																 filters.getCategory(), filters.getSearch());	
 		model.addAttribute("allCategories", articleService.getAllCategories());
@@ -39,12 +39,12 @@ public class StoreController {
 	
 	
 	@RequestMapping("/article-detail")
-	public String articleDetail(@PathParam("id") Long id, Model model) {
-		Article article = articleService.findArticleById(id);
+	public String productDetail(@PathParam("id") Long id, Model model) {
+		Product article = articleService.findArticleById(id);
 		model.addAttribute("article", article);
 		model.addAttribute("notEnoughStock", model.asMap().get("notEnoughStock"));
-		model.addAttribute("addArticleSuccess", model.asMap().get("addArticleSuccess"));
-		return "articleDetail";
+		model.addAttribute("addProductSuccess", model.asMap().get("addProductSuccess"));
+		return "productDetail";
 	}
 	
 

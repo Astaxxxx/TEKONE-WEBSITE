@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.tekone.tekone.domain.Article;
+import com.tekone.tekone.domain.Product;
 import com.tekone.tekone.domain.CartItem;
 import com.tekone.tekone.domain.ShoppingCart;
 import com.tekone.tekone.domain.User;
-import com.tekone.tekone.service.ArticleService;
+import com.tekone.tekone.service.ProductService;
 import com.tekone.tekone.service.ShoppingCartService;
 
 @Controller
@@ -21,7 +21,7 @@ import com.tekone.tekone.service.ShoppingCartService;
 public class ShoppingCartController {
 		
 	@Autowired
-	private ArticleService articleService;
+	private ProductService articleService;
 	
 	@Autowired
 	private ShoppingCartService shoppingCartService;
@@ -36,7 +36,7 @@ public class ShoppingCartController {
 	}
 
 	@RequestMapping("/add-item")
-	public String addItem(@ModelAttribute("article") Article article, @RequestParam("qty") String qty,
+	public String addItem(@ModelAttribute("article") Product article, @RequestParam("qty") String qty,
 						  RedirectAttributes attributes, Model model, Authentication authentication) {
 		article = articleService.findArticleById(article.getId());				
 		if (!article.hasStock(Integer.parseInt(qty))) {
@@ -44,8 +44,8 @@ public class ShoppingCartController {
 			return "redirect:/article-detail?id="+article.getId();
 		}		
 		User user = (User) authentication.getPrincipal();		
-		shoppingCartService.addArticleToShoppingCart(article, user, Integer.parseInt(qty));
-		attributes.addFlashAttribute("addArticleSuccess", true);
+		shoppingCartService.addProductToShoppingCart(article, user, Integer.parseInt(qty));
+		attributes.addFlashAttribute("addProductSuccess", true);
 		return "redirect:/article-detail?id="+article.getId();
 	}
 	

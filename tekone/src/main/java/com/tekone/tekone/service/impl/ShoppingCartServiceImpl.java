@@ -7,7 +7,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import com.tekone.tekone.domain.Article;
+import com.tekone.tekone.domain.Product;
 import com.tekone.tekone.domain.CartItem;
 import com.tekone.tekone.domain.ShoppingCart;
 import com.tekone.tekone.domain.User;
@@ -39,7 +39,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 
 	@Override
 	@CacheEvict(value = "itemcount", allEntries = true)
-	public CartItem addArticleToShoppingCart(Article article, User user, int qty) {
+	public CartItem addProductToShoppingCart(Product article, User user, int qty) {
 		ShoppingCart shoppingCart = this.getShoppingCart(user);
 		CartItem cartItem = shoppingCart.findCartItemByArticleAndSize(article.getId());
 		if (cartItem != null) {
