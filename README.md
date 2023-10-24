@@ -4,8 +4,8 @@ The current website is not hosted due to issues with vitualmin's capability to h
 This website is a java application whch encoparates the Thymeleaf framework and runs on jdk 17 can run on newer versions
 To run the web application you must first pull the repository from the repository or download the zip file
 then open the database folder, in that folder will be 11 csv files and 11 sql.text files which you can import on any database mangment system you are using after creating a ddatabase called Tekone
-If using SQLWorkbench the connaection is already done for you in the application.properties file you will just need to simply indert your username and password and have the dtabases impored to then acess the website.
-If using anyother dtatbasemangement system such as phpmyadmin you will ahve to configure the applications.properties file yourself in accordance to the imported database to have a stable connection.
+If using SQLWorkbench the connection is already done for you in the application.properties file you will just need to simply indert your username and password and have the dtabases impored to then acess the website.
+If using anyother database mangement system such as phpmyadmin you will ahve to configure the applications.properties file yourself in accordance to the imported database to have a stable connection.
 Then navigate your self to the tekone folder -> src -> main -> java -> com -> tekone -> tekone -> controller this brings up java files which if using vs code you can simply run as a spring boot project by clicking the play button in the top right
 Now that you have ran as a spring boot project you can simply type localhost:8080 in the browser to ascess the website 
 
@@ -26,7 +26,7 @@ https://user-images.githubusercontent.com/94316672/229475054-3745b5e7-2474-48ba-
 
 
 
-# tekoneJavaApplication Inventory
+# TekoneJavaApplication Inventory
 README File for Inventory System
 
 Overview:
